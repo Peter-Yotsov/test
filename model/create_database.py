@@ -23,7 +23,7 @@ class Song(Base):
     band = Column(String, default='Unknown')
     album = Column(String, default='Unknown')
     release = Column(String, default='Unknown')
-    # length = calculate in model
+    length = calculate in model
 
     def __str__(self):
         return "{} - {}".format(self.band, self.track)
