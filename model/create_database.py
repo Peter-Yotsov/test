@@ -23,7 +23,7 @@ class Song(Base):
     band = Column(String, default='Unknown')
     album = Column(String, default='Unknown')
     release = Column(String, default='Unknown')
-    # length = calculate in model
+    length = calculate in model
 
     def __str__(self):
         return "{} - {}".format(self.band, self.track)
@@ -32,18 +32,16 @@ class Song(Base):
         return self.__str__()
 
 
-class Playlist(Base):
-    __tablename__ = "playlist"
-    id = Column(Integer, primary_key=True)
-    name = Column(String)
-    songs = relationship('Song',
-                         secondary=association_table)
+class Controller:
+    print('opsa')
 
-    def __str__(self):
-        return self.name
+class MoreControllers:
+  for i in range(5, 10):
+    print(i * i)
 
-    def __repr__(self):
-        return self.__str__()
+class lessControlers:
+  pritn('idk')
+
 
 
 engine = Alch('sqlite:///some.db').engi()
